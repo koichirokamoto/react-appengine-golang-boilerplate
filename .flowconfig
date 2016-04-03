@@ -1,0 +1,13 @@
+[ignore]
+.*/node_modules/*
+.*/server/*
+.*/\.git*
+.*/build/*
+.*/css/*
+
+[include]
+
+[libs]
+
+[options]
+log.file=flow-result.log

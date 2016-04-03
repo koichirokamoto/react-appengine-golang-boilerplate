@@ -1,0 +1,39 @@
+application: your project id
+version: initial
+runtime: go
+api_version: go1
+
+handlers:
+- url: /(.+\.(gif|png|jpeg|jpg))$
+  static_files: \1
+  upload: .+\.(gif|png|jpeg|jpg)$
+  application_readable: true
+  
+- url: /js
+  static_dir: app/js
+
+- url: /(.+\.html)$
+  static_files: app/\1
+  upload: app/.+\.html$
+  
+- url: /api/(.+)$
+  script: _go_app
+
+- url: /.*
+  static_files: app/home.html
+  upload: app/home.html
+
+skip_files:
+- node_modules/*
+- client/*
+- css/*
+- \.git/*
+- \.babelrc
+- \.editorconfig
+- \.eslintrc
+- \.flowconfig
+- \.gitignore
+- karma\.conf\.js
+- package\.json
+- .*\.md
+- webpack\.config\.js

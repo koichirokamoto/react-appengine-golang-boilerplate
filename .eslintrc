@@ -1,0 +1,21 @@
+{
+  "extends": "airbnb", 
+  "parserOptions": {
+    "ecmaVersiones": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "semi": 0,
+    "no-var": 0,
+    "no-unused-vars": 0,
+    "react/jsx-uses-react": 1,
+    "react/jsx-no-undef": 2,
+    "react/wrap-multilines": 2
+  },
+  "plugins": [
+    "react"
+  ]
+}
